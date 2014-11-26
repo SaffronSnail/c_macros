@@ -1,15 +1,19 @@
 #include <stdio.h>
 
+//this is the starting tag for code that should be run at compile time
 #compiletime
 for (int i = 0; i < 3; ++i)
 {
-|unsigned Test#i#(void)
+//code between vertical bars will be inserted into the resulting program, rather than
+//being evaluated at compile time
+|unsigned Test#i#(void) //anything inside of a hastag will be evaluated, and it's return value will be inserted into the program
 {
   printf("Test #i#\n");
   return #i#;
 }
 |
 }
+//this is the ending tag for code that should be run at compile time
 #end compiletime
 
 int main(void)
