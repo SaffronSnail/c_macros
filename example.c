@@ -6,7 +6,7 @@ for (int i = 0; i < 3; ++i)
 {
 //code between vertical bars will be inserted into the resulting program, rather than
 //being evaluated at compile time
-|unsigned Test#i#(void) //anything inside of a hastag will be evaluated, and it's return value will be inserted into the program
+|unsigned Test#i#(void) //anything inside of a hashtag will be evaluated, and it's return value will be inserted into the program
 {
   printf("Test #i#\n");
   return #i#;
